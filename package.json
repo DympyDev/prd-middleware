@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node -r esm src/server.js"
   },
+  "repository": "github:DympyDev/prd-middleware",
   "keywords": [],
   "author": "Dymion Fritz",
   "license": "ISC",

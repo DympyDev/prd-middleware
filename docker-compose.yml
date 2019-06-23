@@ -1,7 +1,7 @@
 version: "2"
 services:
   app:
-    container_name: graphqlapp
+    container_name: prd-middleware
     restart: always
     build: .
     ports:
@@ -9,7 +9,7 @@ services:
     links:
       - mongo
   mongo:
-    container_name: graphqlmongo
+    container_name: prd-mongo
     image: mongo
     volumes:
       - ./data:/data/db
@@ -17,6 +17,7 @@ services:
       - "27017:27017"
   admin-mongo:
     image: 0x59/admin-mongo:latest
+    container_name: prd-mongo-admin
     ports:
       - "8082:8082"
     environment:
