@@ -1,0 +1,21 @@
+{
+  "name": "prd-middleware",
+  "version": "1.0.0",
+  "description": "A middleware solution for a subset of the PRD data. Data courtesy of http://www.pathfindercommunity.net/home/databases.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node -r esm src/server.js"
+  },
+  "keywords": [],
+  "author": "Dymion Fritz",
+  "license": "ISC",
+  "dependencies": {
+    "esm": "^3.2.25",
+    "express": "^4.16.4",
+    "express-graphql": "^0.8.0",
+    "graphql": "^14.0.2",
+    "mongoose": "^5.3.5",
+    "rimraf": "^2.6.2",
+    "xlsx": "^0.13.2"
+  }
+}
