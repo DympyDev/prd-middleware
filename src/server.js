@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import graphqlHTTP from 'express-graphql';
+import cors from 'cors';
 
 import { PraSchema } from './graphql/schema';
 
@@ -13,6 +14,8 @@ import ProcessMonsters from './parsers/monsters.js';
 import ProcessSpells from './parsers/spells.js';
 import ProcessFeats from './parsers/feats.js';
 
+const pkgJson = require('../package.json');
+
 const INPUT_FOLDER = `${__dirname}/../input`;
 
 const MONSTERS_ODS_FILE = `${INPUT_FOLDER}/monsters.ods`;
@@ -20,6 +23,19 @@ const SPELLS_ODS_FILE = `${INPUT_FOLDER}/spells.ods`;
 const FEATS_ODS_FILE = `${INPUT_FOLDER}/feats.ods`;
 
 const app = express();
+
+const whitelist = pkgJson.prd_options.cors_whitelist;
+const corsOptions = {
+  origin: (origin, callback) => {
+    let callbackArgs = [new Error('Not allowed by CORS')]
+    if (whitelist.indexOf(origin) !== -1) {
+      callbackArgs = [null, true]
+    }
+    callback(...callbackArgs)
+  }
+}
+
+app.use(cors(corsOptions));
 
 function connectToMongoDb() {
   mongoose.connect('mongodb://mongo/pra', {

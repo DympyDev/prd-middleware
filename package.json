@@ -11,6 +11,7 @@
   "author": "Dymion Fritz",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "esm": "^3.2.25",
     "express": "^4.16.4",
     "express-graphql": "^0.8.0",
@@ -18,5 +19,10 @@
     "mongoose": "^5.3.5",
     "rimraf": "^2.6.2",
     "xlsx": "^0.13.2"
+  },
+  "prd_options": {
+    "cors_whitelist": [
+      "http://localhost:4200"
+    ]
   }
 }
