@@ -1,0 +1,53 @@
+export const MonsterType = `
+  type Monster {
+    name: String
+    cr: Float
+    xp: Int
+    race: String
+    class: String
+    alignment: String
+    size: String
+    type: String
+    subType: String
+    initiative: String
+    senses: String
+    ac: String
+    hp: Int
+    hd: String
+    saves: String
+    fort: String
+    ref: String
+    will: String
+    resist: String
+    speed: String
+    melee: String
+    ranged: String
+    space: String
+    reach: String
+    specialAttacks: String
+    spellLikeAbilities: String
+    spellsPrepared: String
+    spellDomains: String
+    abilityScores: String
+    baseAtk: Int
+    cmb: String
+    cmd: String
+    feats: String
+    skills: String
+    racialMods: String
+    languages: String
+    environment: String
+    treasure: String
+    descriptionVisual: String
+    source: String
+    description: String
+    fly: Boolean
+    climb: Boolean
+    burrow: Boolean
+    swim: Boolean
+    land: Boolean
+    ageCategory: String
+    acMods: String
+    id: Int
+  }
+`;
