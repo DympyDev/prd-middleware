@@ -22,7 +22,7 @@ const Query = `
   }
 `;
 
-export const generateSchemaForData = (monsters = [], spells = [], feats = []) => makeExecutableSchema({
+export const generateSchemasForData = (monsters = [], spells = [], feats = []) => makeExecutableSchema({
   typeDefs: [Query, MonsterType, SpellType, FeatType],
   resolvers: {
     Query: {

@@ -10,6 +10,8 @@ COPY package-lock.json /usr/src/prdMiddleware/
 RUN npm install
 #copy all your files under the working directory
 COPY . /usr/src/prdMiddleware
+
+VOLUME /usr/src/prdMiddleware/config
 #expose the port 4000
 EXPOSE 4000
 #start nodejs server 

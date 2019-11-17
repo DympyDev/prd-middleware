@@ -15,12 +15,6 @@
     "esm": "^3.2.25",
     "graphql": "^14.4.2",
     "graphql-tools": "^4.0.5",
-    "xlsx": "^0.13.2"
-  },
-  "prd_options": {
-    "verbose": false,
-    "cors_whitelist": [
-      "http://localhost:4200"
-    ]
+    "xlsx": "^0.15.2"
   }
 }
