@@ -20,4 +20,16 @@ Because this is all Docker ready, along with a docker-compose file, all you'll n
 
 `docker-compose build` followed by `docker-compose up`
 
-If you want it all to run on a different port, feel free to change some stuff in the docker-compose.yml file.
+If you want it all to run on a different port, or add a configuration, feel free to change some stuff in the docker-compose.yml file.
+
+## A different configuration
+At the moment, there are two things configurable through a JSON file.
+The JSON file is formatted like so:
+```json
+{
+  verbose: true,
+  cors_whitelist: []
+}
+```
+When starting, the application looks for a configuration file name `server_config.json` in a folder named `/usr/src/prdMiddleware/config`.
+The `/usr/src/prdMiddleware/config` folder is defined as a volume in the Docker file, so you can add that to the docker-compose file and you'll be all set!
